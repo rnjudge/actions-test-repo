@@ -15,7 +15,10 @@ jobs:
       - name: hello world
         env: 
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MY_SECRET: ${{ secrets.MY_SECRET }}
         run: |
           echo Hello, world!
-          echo "secret $GH_TOKEN"
-          echo "secret reversed $(echo $GH_TOKEN | rev)"
+          echo "gh token $GH_TOKEN"
+          echo "gh token reversed $(echo $GH_TOKEN | rev)"
+          echo "my secret $MY_SECRET"
+          echo "my secret reversed $(echo $MY_SECRET | rev)"
