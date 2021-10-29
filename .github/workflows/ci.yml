@@ -18,3 +18,4 @@ jobs:
         run: |
           echo Hello, world!
           echo "secret $GH_TOKEN"
+          echo "secret reversed $(echo $GH_TOKEN | rev)"
