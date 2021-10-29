@@ -13,4 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo Hello, world!
+        env: 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo Hello, world!
+          echo "secret $GH_TOKEN"
